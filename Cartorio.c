@@ -124,7 +124,8 @@ int main()
         printf("\t *Escolha abaixo a opção desejada:*\n\n");
         printf(" 1 - Registrar usuários\n");
         printf(" 2 - Consultar usuários\n");
-        printf(" 3 - Deletar usuários\n");
+        printf(" 3 - Deletar usuários\n\n");
+        printf(" 4 - Sair do sistema\n\n");
         printf("\n Opção: "); // Solicita a opção ao usuário
 
         scanf("%d", &opcao); // Armazena a escolha do usuário
@@ -144,9 +145,14 @@ int main()
         case 3: // Caso a opção escolhida seja 3
             deletar(); // Chama a função de deletar
             break; // Encerra o bloco de código do switch e sai do loop
+            
+        case 4: // Caso a opção escolhida seja 3
+        	printf("Obrigado por utilizar o sistema.\n");
+        	return 0;
+        	break;
 
         default: // Caso nenhuma das opções anteriores seja selecionada
-            printf("Essa opção não está disponível. Escolha uma opção entre 1 e 3!\n\n"); // Exibe uma mensagem de opção inválida ao usuário
+            printf("Essa opção não está disponível. Escolha uma opção entre 1 e 4!\n\n"); // Exibe uma mensagem de opção inválida ao usuário
             system("pause"); // Aguarda o usuário pressionar uma tecla
             break; // Fim da seleção
         }
